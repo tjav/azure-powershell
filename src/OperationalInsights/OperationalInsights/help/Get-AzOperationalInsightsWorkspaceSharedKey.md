@@ -6,7 +6,7 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.operationa
 schema: 2.0.0
 ---
 
-# Get-AzOperationalInsightsWorkspaceSharedKey
+# Get-AzOperationalInsightsWorkspaceSharedKeys
 
 ## SYNOPSIS
 Gets the shared keys for a workspace.
@@ -26,17 +26,17 @@ The keys are used to connect Operational Insights agents to the workspace.
 
 ### Example 1: Get shared keys by workspace name
 ```
-PS C:\>Get-AzOperationalInsightsWorkspaceSharedKey -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
+PS C:\>Get-AzOperationalInsightsWorkspaceSharedKeys -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
 ```
 
 This command gets the shared keys for the workspace named MyWorkspace in the resource group named ContosoResourceGroup.
 
 ### Example 2: Get shared keys by using the pipeline
 ```
-PS C:\>Get-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" | Get-AzOperationalInsightsWorkspaceSharedKey
+PS C:\>Get-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" | Get-AzOperationalInsightsWorkspaceSharedKeys
 ```
 
-This command gets the workspace named MyWorkspace using the Get-AzOperationalInsightsWorkspace cmdlet, and then passes the workspace to the **Get-AzOperationalInsightsWorkspaceSharedKey** cmdlet.
+This command gets the workspace named MyWorkspace using the Get-AzOperationalInsightsWorkspace cmdlet, and then passes the workspace to the **Get-AzOperationalInsightsWorkspaceSharedKeys** cmdlet.
 The command gets the shared keys for that workspace.
 
 ## PARAMETERS
